@@ -14,34 +14,33 @@ describe('Punchcutter', function () {
   var testDir = __dirname.substring(process.cwd().length + 1) + '/';
 
   var config = {
-    'fonts': [{
-      'name': 'mono',
-      'src': [
+    fonts: [{
+      name: 'mono',
+      src: [
         testDir + 'data/src/mono/*.svg'
       ],
-      'dist': testDir + 'data/dist/',
-      'types': ['svg'],
-      'svg': {
-        'mono': true
+      dist: testDir + 'data/dist/',
+      types: ['glyph', 'sprite'],
+      sprite: {
+        monochrome: true
       }
     }, {
-      'name': 'poly',
-      'src': [
+      name: 'poly',
+      src: [
         testDir + 'data/src/poly/*.svg'
       ],
-      'dist': testDir + 'data/dist/',
-      'types': ['font', 'svg'],
-      'font': {
-        'font': 'poly',
-        'order': ['eot', 'woff', 'ttf'],
-        'relativeFontPath': '../fonts',
-        'stylesheets': ['scss'],
-        'syntax': 'bem',
-        'templateOptions': {
-          'baseClass': 'poly',
-          'classPrefix': 'poly--'
+      dist: testDir + 'data/dist/',
+      types: ['font', 'sprite'],
+      font: {
+        font: 'poly',
+        order: ['eot', 'woff', 'ttf'],
+        stylesheets: ['scss'],
+        syntax: 'bem',
+        templateOptions: {
+          baseClass: 'poly',
+          classPrefix: 'poly--'
         },
-        'types': ['eot', 'woff', 'ttf']
+        types: ['eot', 'woff', 'ttf']
       }
     }]
   };
@@ -87,12 +86,16 @@ describe('Punchcutter', function () {
       };
 
       var expected = [
-        testDir + 'data/dist/' + 'font/_poly.scss',
-        testDir + 'data/dist/' + 'font/poly.eot',
-        testDir + 'data/dist/' + 'font/poly.ttf',
-        testDir + 'data/dist/' + 'font/poly.woff',
-        testDir + 'data/dist/' + 'svg/mono.svg',
-        testDir + 'data/dist/' + 'svg/poly.svg',
+        testDir + 'data/dist/mono/glyph/png/black/erlenmeyer-flask.png',
+        testDir + 'data/dist/mono/glyph/png/black/eye.png',
+        testDir + 'data/dist/mono/glyph/svg/black/erlenmeyer-flask.svg',
+        testDir + 'data/dist/mono/glyph/svg/black/eye.svg',
+        testDir + 'data/dist/mono/sprite/mono.svg',
+        testDir + 'data/dist/poly/font/_poly.scss',
+        testDir + 'data/dist/poly/font/poly.eot',
+        testDir + 'data/dist/poly/font/poly.ttf',
+        testDir + 'data/dist/poly/font/poly.woff',
+        testDir + 'data/dist/poly/sprite/poly.svg'
       ].sort();
 
       return assert.eventually.deepEqual(actual(), expected);
