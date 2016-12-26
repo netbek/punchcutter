@@ -30,7 +30,7 @@ describe('Punchcutter', function () {
         testDir + 'data/src/poly/*.svg'
       ],
       dist: testDir + 'data/dist/',
-      types: ['font', 'jsfont', 'sprite'],
+      types: ['font', 'js', 'sprite'],
       font: {
         font: 'poly',
         order: ['eot', 'woff', 'ttf'],
