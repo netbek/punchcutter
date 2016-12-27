@@ -24,6 +24,7 @@ describe('Punchcutter', function () {
       sprite: {
         monochrome: true,
         svg: {
+          dist: testDir + 'data/dist/mono/sprite/',
           idPrefix: 'mono--'
         }
       }
