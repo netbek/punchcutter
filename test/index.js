@@ -22,7 +22,10 @@ describe('Punchcutter', function () {
       dist: testDir + 'data/dist/',
       types: ['glyph', 'sprite'],
       sprite: {
-        monochrome: true
+        monochrome: true,
+        svg: {
+          idPrefix: 'mono--'
+        }
       }
     }, {
       name: 'poly',
