@@ -32,7 +32,6 @@ describe('Punchcutter', function () {
       dist: testDir + 'data/dist/',
       types: ['font', 'js', 'sprite'],
       font: {
-        font: 'poly',
         order: ['eot', 'woff', 'ttf'],
         stylesheets: ['scss'],
         syntax: 'bem',
