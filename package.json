@@ -1,6 +1,6 @@
 {
   "name": "punchcutter",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "description": "Build fonts",
   "main": "lib/punchcutter.js",
   "repository": {
@@ -31,12 +31,13 @@
     "fs-extra": "^1.0.0",
     "glob-promise": "^3.1.0",
     "grunt": "^1.0.1",
-    "gulp-svg2png": "^1.0.2",
-    "gulp": "^3.9.1",
-    "gulp-pngmin": "^0.1.4",
     "grunt-webfont": "https://github.com/netbek/grunt-webfont.git#feature-logger-option",
     "lodash": "^4.17.2",
     "mkdirp": "^0.5.1",
+    "pngquant": "^1.1.1",
+    "replace-ext": "^1.0.0",
+    "streamifier": "^0.1.1",
+    "svg2png": "3.0.1",
     "svgo": "^0.7.1",
     "svgstore": "^2.0.2"
   },

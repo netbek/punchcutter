@@ -7,7 +7,7 @@ Build fonts.
 ### Ubuntu
 
 ```
-sudo apt-get install fontforge g++ graphicsmagick
+sudo apt-get install fontforge g++ graphicsmagick pngquant
 ```
 
 The most recent version of `ttfautohint` in Ubuntu 14/15 has [a fatal bug](https://github.com/sapegin/grunt-webfont/issues/162), and should be compiled from source.
