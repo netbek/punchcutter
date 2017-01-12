@@ -29,6 +29,7 @@
     "del": "^2.2.2",
     "directory-colorfy": "^1.1.0",
     "fs-extra": "^1.0.0",
+    "glob": "^7.1.1",
     "glob-promise": "^3.1.0",
     "grunt": "^1.0.1",
     "grunt-webfont": "https://github.com/netbek/grunt-webfont.git#feature-logger-option",
