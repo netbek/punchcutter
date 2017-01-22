@@ -48,7 +48,7 @@ describe('Punchcutter', function () {
     }]
   };
 
-  var punchcutter = new Punchcutter;
+  var punchcutter = new Punchcutter();
 
   beforeEach(function (done) {
     // Delete test output.
