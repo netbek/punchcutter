@@ -14,38 +14,48 @@ describe('Punchcutter', function () {
   var testDir = __dirname.substring(process.cwd().length + 1) + '/';
 
   var config = {
-    fonts: [{
-      name: 'mono',
-      src: [
-        testDir + 'data/src/mono/*.svg'
-      ],
-      dist: testDir + 'data/dist/',
-      types: ['glyph', 'sprite'],
-      sprite: {
-        monochrome: true,
-        svg: {
-          dist: testDir + 'data/dist/mono/sprite/',
-          idPrefix: 'mono--'
+    fonts: [
+      // Mono
+      {
+        name: 'mono',
+        src: [
+          testDir + 'data/src/mono/*.svg'
+        ],
+        dist: testDir + 'data/dist/',
+        types: ['sprite'],
+        sprite: {
+          monochrome: true,
+          svg: {
+            dist: testDir + 'data/dist/mono/sprite/',
+            idPrefix: 'mono--'
+          }
+        }
+      },
+      // Poly
+      {
+        name: 'poly',
+        src: [
+          testDir + 'data/src/poly/*.svg'
+        ],
+        dist: testDir + 'data/dist/',
+        types: ['font', 'glyph', 'js', 'sprite'],
+        font: {
+          order: ['eot', 'woff', 'ttf'],
+          stylesheets: ['scss'],
+          syntax: 'bem',
+          templateOptions: {
+            baseClass: 'poly',
+            classPrefix: 'poly--'
+          },
+          types: ['eot', 'woff', 'ttf']
+        },
+        glyph: {
+          colors: {
+            'black': '#000000'
+          }
         }
       }
-    }, {
-      name: 'poly',
-      src: [
-        testDir + 'data/src/poly/*.svg'
-      ],
-      dist: testDir + 'data/dist/',
-      types: ['font', 'js', 'sprite'],
-      font: {
-        order: ['eot', 'woff', 'ttf'],
-        stylesheets: ['scss'],
-        syntax: 'bem',
-        templateOptions: {
-          baseClass: 'poly',
-          classPrefix: 'poly--'
-        },
-        types: ['eot', 'woff', 'ttf']
-      }
-    }]
+    ]
   };
 
   var punchcutter = new Punchcutter();
@@ -89,15 +99,15 @@ describe('Punchcutter', function () {
       };
 
       var expected = [
-        testDir + 'data/dist/mono/glyph/png/black/erlenmeyer-flask.png',
-        testDir + 'data/dist/mono/glyph/png/black/eye.png',
-        testDir + 'data/dist/mono/glyph/svg/black/erlenmeyer-flask.svg',
-        testDir + 'data/dist/mono/glyph/svg/black/eye.svg',
         testDir + 'data/dist/mono/sprite/mono.svg',
         testDir + 'data/dist/poly/font/_poly.scss',
         testDir + 'data/dist/poly/font/poly.eot',
         testDir + 'data/dist/poly/font/poly.ttf',
         testDir + 'data/dist/poly/font/poly.woff',
+        testDir + 'data/dist/poly/glyph/png/black/erlenmeyer-flask.png',
+        testDir + 'data/dist/poly/glyph/png/black/eye.png',
+        testDir + 'data/dist/poly/glyph/svg/black/erlenmeyer-flask.svg',
+        testDir + 'data/dist/poly/glyph/svg/black/eye.svg',
         testDir + 'data/dist/poly/js/poly.js',
         testDir + 'data/dist/poly/sprite/poly.svg'
       ].sort();
