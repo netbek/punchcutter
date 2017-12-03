@@ -10,7 +10,7 @@ var path = require('path');
 var Punchcutter = require('..').Punchcutter;
 var Promise = require('bluebird');
 
-describe('Punchcutter', function () {
+describe('Punchcutter', function() {
   var testDir = __dirname.substring(process.cwd().length + 1) + '/';
 
   var config = {
@@ -18,9 +18,7 @@ describe('Punchcutter', function () {
       // Mono
       {
         name: 'mono',
-        src: [
-          testDir + 'data/src/mono/*.svg'
-        ],
+        src: [testDir + 'data/src/mono/*.svg'],
         dist: testDir + 'data/dist/',
         types: ['sprite'],
         sprite: {
@@ -34,9 +32,7 @@ describe('Punchcutter', function () {
       // Poly
       {
         name: 'poly',
-        src: [
-          testDir + 'data/src/poly/*.svg'
-        ],
+        src: [testDir + 'data/src/poly/*.svg'],
         dist: testDir + 'data/dist/',
         types: ['font', 'glyph', 'js', 'sprite'],
         font: {
@@ -51,7 +47,7 @@ describe('Punchcutter', function () {
         },
         glyph: {
           colors: {
-            'black': '#000000'
+            black: '#000000'
           }
         }
       }
@@ -60,40 +56,47 @@ describe('Punchcutter', function () {
 
   var punchcutter = new Punchcutter();
 
-  beforeEach(function (done) {
+  beforeEach(function(done) {
     // Delete test output.
-    del(_.map(config.fonts, function (font) {
+    del(
+      _.map(config.fonts, function(font) {
         return font.dist;
-      }))
-      .then(function () {
-        done();
-      });
+      })
+    ).then(function() {
+      done();
+    });
   });
 
-  after(function (done) {
+  after(function(done) {
     // Delete test output.
-    del(_.map(config.fonts, function (font) {
+    del(
+      _.map(config.fonts, function(font) {
         return font.dist;
-      }))
-      .then(function () {
-        done();
-      });
+      })
+    ).then(function() {
+      done();
+    });
   });
 
-  describe('build', function () {
-    it('Should build', function () {
-      var actual = function () {
-        return Promise.mapSeries(config.fonts, function (font) {
-            return punchcutter.build(font);
+  describe('build', function() {
+    it('Should build', function() {
+      var actual = function() {
+        return Promise.mapSeries(config.fonts, function(font) {
+          return punchcutter.build(font);
+        })
+          .then(function() {
+            return multiGlob(
+              _.uniq(
+                _.map(config.fonts, function(config) {
+                  return config.dist + '**/*';
+                })
+              ),
+              {
+                nodir: true
+              }
+            );
           })
-          .then(function () {
-            return multiGlob(_.uniq(_.map(config.fonts, function (config) {
-              return config.dist + '**/*';
-            })), {
-              nodir: true
-            });
-          })
-          .then(function (files) {
+          .then(function(files) {
             return Promise.resolve(files.sort());
           });
       };
