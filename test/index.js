@@ -3,10 +3,12 @@ const chai = require('chai');
 const {assert} = chai;
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-const del = require('del');
+const fs = require('fs-extra');
 const Promise = require('bluebird');
 const {multiGlob} = require('../lib/util');
 const {Punchcutter} = require('..');
+
+Promise.promisifyAll(fs);
 
 describe('Punchcutter', function() {
   const testDir = __dirname.substring(process.cwd().length + 1) + '/';
@@ -56,10 +58,13 @@ describe('Punchcutter', function() {
 
   const setup = function(done) {
     // Delete test output.
-    del(
+    Promise.mapSeries(
       _.map(config.fonts, function(font) {
         return font.dist;
-      })
+      }),
+      function(file) {
+        return fs.removeAsync(file);
+      }
     ).then(function() {
       done();
     });
