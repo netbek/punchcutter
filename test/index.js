@@ -6,7 +6,19 @@ chai.use(chaiAsPromised);
 const fs = require('fs-extra');
 const Promise = require('bluebird');
 const multiGlob = require('../lib/multiGlob');
-const {build, GLYPHS, JS_FONT, SPRITE, WEB_FONTS, PNG, SVG} = require('..');
+const {
+  build,
+  GLYPHS,
+  JS_FONT,
+  SPRITE,
+  WEB_FONTS,
+  PNG,
+  SVG,
+  EOT,
+  WOFF,
+  WOFF2,
+  TTF
+} = require('..');
 
 Promise.promisifyAll(fs);
 
@@ -22,14 +34,14 @@ describe('Punchcutter', function() {
         dist: testDir + 'data/dist/',
         builds: [
           {
-            buildType: GLYPHS
+            type: GLYPHS
           },
           {
-            buildType: SPRITE,
+            type: SPRITE,
             monochrome: true,
             builds: [
               {
-                buildType: SVG,
+                type: SVG,
                 dist: testDir + 'data/dist/mono/sprite/',
                 idPrefix: 'mono--'
               }
@@ -44,44 +56,44 @@ describe('Punchcutter', function() {
         dist: testDir + 'data/dist/',
         builds: [
           {
-            buildType: WEB_FONTS,
-            order: ['eot', 'woff', 'ttf'],
+            type: WEB_FONTS,
+            order: [EOT, WOFF, TTF],
             stylesheets: ['scss'],
             syntax: 'bem',
             templateOptions: {
               baseClass: 'poly',
               classPrefix: 'poly--'
             },
-            types: ['eot', 'woff', 'ttf']
+            types: [EOT, WOFF, TTF]
           },
           {
-            buildType: GLYPHS,
+            type: GLYPHS,
             colors: {
               blue: '#00f',
               red: '#f00'
             },
             builds: [
               {
-                buildType: SVG,
+                type: SVG,
                 dist: testDir + 'data/dist/poly/glyph/svg/'
               },
               {
-                buildType: PNG,
+                type: PNG,
                 dist: testDir + 'data/dist/poly/glyph/png/@1x/',
                 scale: 1
               },
               {
-                buildType: PNG,
+                type: PNG,
                 dist: testDir + 'data/dist/poly/glyph/png/@2x/',
                 scale: 2
               }
             ]
           },
           {
-            buildType: JS_FONT
+            type: JS_FONT
           },
           {
-            buildType: SPRITE
+            type: SPRITE
           }
         ]
       }
