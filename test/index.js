@@ -80,6 +80,8 @@ describe('Punchcutter', function() {
 
   describe('build', function() {
     it('Should build', function() {
+      this.timeout(5000);
+
       var actual = function() {
         return Promise.mapSeries(config.fonts, function(font) {
           return punchcutter.build(font);
