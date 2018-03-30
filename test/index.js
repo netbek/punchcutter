@@ -6,7 +6,7 @@ chai.use(chaiAsPromised);
 const fs = require('fs-extra');
 const Promise = require('bluebird');
 const {multiGlob} = require('../lib/util');
-const {Punchcutter} = require('..');
+const {build, GLYPHS, JS_FONT, SPRITE, WEB_FONTS} = require('..');
 
 Promise.promisifyAll(fs);
 
@@ -20,41 +20,50 @@ describe('Punchcutter', function() {
         name: 'mono',
         src: [testDir + 'data/src/mono/*.svg'],
         dist: testDir + 'data/dist/',
-        types: ['sprite'],
-        sprite: {
-          monochrome: true,
-          svg: {
-            dist: testDir + 'data/dist/mono/sprite/',
-            idPrefix: 'mono--'
+        builds: [
+          {
+            buildType: SPRITE,
+            monochrome: true,
+            svg: {
+              dist: testDir + 'data/dist/mono/sprite/',
+              idPrefix: 'mono--'
+            }
           }
-        }
+        ]
       },
       // Poly
       {
         name: 'poly',
         src: [testDir + 'data/src/poly/*.svg'],
         dist: testDir + 'data/dist/',
-        types: ['font', 'glyph', 'js', 'sprite'],
-        font: {
-          order: ['eot', 'woff', 'ttf'],
-          stylesheets: ['scss'],
-          syntax: 'bem',
-          templateOptions: {
-            baseClass: 'poly',
-            classPrefix: 'poly--'
+        builds: [
+          {
+            buildType: WEB_FONTS,
+            order: ['eot', 'woff', 'ttf'],
+            stylesheets: ['scss'],
+            syntax: 'bem',
+            templateOptions: {
+              baseClass: 'poly',
+              classPrefix: 'poly--'
+            },
+            types: ['eot', 'woff', 'ttf']
           },
-          types: ['eot', 'woff', 'ttf']
-        },
-        glyph: {
-          colors: {
-            black: '#000000'
+          {
+            buildType: GLYPHS,
+            colors: {
+              black: '#000000'
+            }
+          },
+          {
+            buildType: JS_FONT
+          },
+          {
+            buildType: SPRITE
           }
-        }
+        ]
       }
     ]
   };
-
-  const punchcutter = new Punchcutter();
 
   const setup = function(done) {
     // Delete test output.
@@ -79,7 +88,7 @@ describe('Punchcutter', function() {
 
       const actual = function() {
         return Promise.mapSeries(config.fonts, function(font) {
-          return punchcutter.build(font);
+          return build(font);
         })
           .then(function() {
             return multiGlob(
