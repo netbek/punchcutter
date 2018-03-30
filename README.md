@@ -1,6 +1,6 @@
 # Punchcutter [![CircleCI](https://circleci.com/gh/netbek/punchcutter.svg?style=svg)](https://circleci.com/gh/netbek/punchcutter)
 
-Build fonts.
+Build web fonts, SVG sprites, PNG glyphs, and more.
 
 ## Installation
 
