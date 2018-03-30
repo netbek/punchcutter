@@ -1,19 +1,17 @@
-var _ = require('lodash');
-var chai = require('chai');
-var assert = chai.assert;
-var chaiAsPromised = require('chai-as-promised');
+const _ = require('lodash');
+const chai = require('chai');
+const {assert} = chai;
+const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
-var del = require('del');
-var multiGlob = require('../lib/util').multiGlob;
-var globPromise = require('glob-promise');
-var path = require('path');
-var Punchcutter = require('..').Punchcutter;
-var Promise = require('bluebird');
+const del = require('del');
+const Promise = require('bluebird');
+const {multiGlob} = require('../lib/util');
+const {Punchcutter} = require('..');
 
 describe('Punchcutter', function() {
-  var testDir = __dirname.substring(process.cwd().length + 1) + '/';
+  const testDir = __dirname.substring(process.cwd().length + 1) + '/';
 
-  var config = {
+  const config = {
     fonts: [
       // Mono
       {
@@ -54,9 +52,9 @@ describe('Punchcutter', function() {
     ]
   };
 
-  var punchcutter = new Punchcutter();
+  const punchcutter = new Punchcutter();
 
-  beforeEach(function(done) {
+  const setup = function(done) {
     // Delete test output.
     del(
       _.map(config.fonts, function(font) {
@@ -65,24 +63,16 @@ describe('Punchcutter', function() {
     ).then(function() {
       done();
     });
-  });
+  };
 
-  after(function(done) {
-    // Delete test output.
-    del(
-      _.map(config.fonts, function(font) {
-        return font.dist;
-      })
-    ).then(function() {
-      done();
-    });
-  });
+  beforeEach(setup);
+  after(setup);
 
   describe('build', function() {
     it('Should build', function() {
       this.timeout(5000);
 
-      var actual = function() {
+      const actual = function() {
         return Promise.mapSeries(config.fonts, function(font) {
           return punchcutter.build(font);
         })
@@ -103,7 +93,7 @@ describe('Punchcutter', function() {
           });
       };
 
-      var expected = [
+      const expected = [
         testDir + 'data/dist/mono/sprite/mono.svg',
         testDir + 'data/dist/poly/font/_poly.scss',
         testDir + 'data/dist/poly/font/poly.eot',
