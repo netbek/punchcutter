@@ -5,8 +5,8 @@ const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const fs = require('fs-extra');
 const Promise = require('bluebird');
-const {multiGlob} = require('../lib/util');
-const {build, GLYPHS, JS_FONT, SPRITE, WEB_FONTS} = require('..');
+const multiGlob = require('../lib/multiGlob');
+const {build, GLYPHS, JS_FONT, SPRITE, WEB_FONTS, PNG, SVG} = require('..');
 
 Promise.promisifyAll(fs);
 
@@ -22,12 +22,18 @@ describe('Punchcutter', function() {
         dist: testDir + 'data/dist/',
         builds: [
           {
+            buildType: GLYPHS
+          },
+          {
             buildType: SPRITE,
             monochrome: true,
-            svg: {
-              dist: testDir + 'data/dist/mono/sprite/',
-              idPrefix: 'mono--'
-            }
+            builds: [
+              {
+                buildType: SVG,
+                dist: testDir + 'data/dist/mono/sprite/',
+                idPrefix: 'mono--'
+              }
+            ]
           }
         ]
       },
@@ -51,8 +57,25 @@ describe('Punchcutter', function() {
           {
             buildType: GLYPHS,
             colors: {
-              black: '#000000'
-            }
+              blue: '#00f',
+              red: '#f00'
+            },
+            builds: [
+              {
+                buildType: SVG,
+                dist: testDir + 'data/dist/poly/glyph/svg/'
+              },
+              {
+                buildType: PNG,
+                dist: testDir + 'data/dist/poly/glyph/png/@1x/',
+                scale: 1
+              },
+              {
+                buildType: PNG,
+                dist: testDir + 'data/dist/poly/glyph/png/@2x/',
+                scale: 2
+              }
+            ]
           },
           {
             buildType: JS_FONT
@@ -108,15 +131,25 @@ describe('Punchcutter', function() {
       };
 
       const expected = [
+        testDir + 'data/dist/mono/glyph/svg/erlenmeyer-flask.svg',
+        testDir + 'data/dist/mono/glyph/svg/eye.svg',
         testDir + 'data/dist/mono/sprite/mono.svg',
         testDir + 'data/dist/poly/font/_poly.scss',
         testDir + 'data/dist/poly/font/poly.eot',
         testDir + 'data/dist/poly/font/poly.ttf',
         testDir + 'data/dist/poly/font/poly.woff',
-        testDir + 'data/dist/poly/glyph/png/black/erlenmeyer-flask.png',
-        testDir + 'data/dist/poly/glyph/png/black/eye.png',
-        testDir + 'data/dist/poly/glyph/svg/black/erlenmeyer-flask.svg',
-        testDir + 'data/dist/poly/glyph/svg/black/eye.svg',
+        testDir + 'data/dist/poly/glyph/png/@1x/blue/erlenmeyer-flask.png',
+        testDir + 'data/dist/poly/glyph/png/@1x/blue/eye.png',
+        testDir + 'data/dist/poly/glyph/png/@1x/red/erlenmeyer-flask.png',
+        testDir + 'data/dist/poly/glyph/png/@1x/red/eye.png',
+        testDir + 'data/dist/poly/glyph/png/@2x/blue/erlenmeyer-flask.png',
+        testDir + 'data/dist/poly/glyph/png/@2x/blue/eye.png',
+        testDir + 'data/dist/poly/glyph/png/@2x/red/erlenmeyer-flask.png',
+        testDir + 'data/dist/poly/glyph/png/@2x/red/eye.png',
+        testDir + 'data/dist/poly/glyph/svg/blue/erlenmeyer-flask.svg',
+        testDir + 'data/dist/poly/glyph/svg/red/erlenmeyer-flask.svg',
+        testDir + 'data/dist/poly/glyph/svg/blue/eye.svg',
+        testDir + 'data/dist/poly/glyph/svg/red/eye.svg',
         testDir + 'data/dist/poly/js/poly.js',
         testDir + 'data/dist/poly/sprite/poly.svg'
       ].sort();
