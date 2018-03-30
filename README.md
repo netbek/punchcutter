@@ -30,6 +30,24 @@ Build fonts.
     brew install ttfautohint --with-qt
     ```
 
+## Usage
+
+### Web fonts
+
+See [examples/web-fonts.js](https://github.com/netbek/punchcutter/blob/master/examples/web-fonts.js). Run the example: `cd examples && node web-fonts.js`
+
+### SVG and PNG glyphs
+
+See [examples/glyphs.js](https://github.com/netbek/punchcutter/blob/master/examples/glyphs.js). Run the example: `cd examples && node glyphs.js`
+
+### JS font
+
+See [examples/js-font.js](https://github.com/netbek/punchcutter/blob/master/examples/js-font.js). Run the example: `cd examples && node js-font.js`
+
+### SVG sprite
+
+See [examples/sprite.js](https://github.com/netbek/punchcutter/blob/master/examples/sprite.js). Run the example: `cd examples && node sprite.js`
+
 ## Credit
 
 Test font: [Ionicons](https://github.com/driftyco/ionicons) (MIT license)
