@@ -34,19 +34,19 @@ Build fonts.
 
 ### Web fonts
 
-`cd examples && node web-fonts.js`
+See [examples/web-fonts.js](https://github.com/netbek/punchcutter/blob/master/examples/web-fonts.js). Run the example: `cd examples && node web-fonts.js`
 
 ### SVG and PNG glyphs
 
-`cd examples && node glyphs.js`
+See [examples/glyphs.js](https://github.com/netbek/punchcutter/blob/master/examples/glyphs.js). Run the example: `cd examples && node glyphs.js`
 
 ### JS font
 
-`cd examples && node js-font.js`
+See [examples/js-font.js](https://github.com/netbek/punchcutter/blob/master/examples/js-font.js). Run the example: `cd examples && node js-font.js`
 
 ### SVG sprite
 
-`cd examples && node sprite.js`
+See [examples/sprite.js](https://github.com/netbek/punchcutter/blob/master/examples/sprite.js). Run the example: `cd examples && node sprite.js`
 
 ## Credit
 
