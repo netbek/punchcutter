@@ -1,4 +1,3 @@
-const _ = require('lodash');
 const chai = require('chai');
 const {assert} = chai;
 const chaiAsPromised = require('chai-as-promised');
@@ -16,7 +15,6 @@ const {
   SVG,
   EOT,
   WOFF,
-  WOFF2,
   TTF
 } = require('..');
 
@@ -31,10 +29,15 @@ describe('Punchcutter', function() {
       {
         name: 'mono',
         src: [testDir + 'data/src/mono/*.svg'],
-        dist: testDir + 'data/dist/',
         builds: [
           {
-            type: GLYPHS
+            type: GLYPHS,
+            builds: [
+              {
+                type: SVG,
+                dist: testDir + 'data/dist/mono/glyph/svg/'
+              }
+            ]
           },
           {
             type: SPRITE,
@@ -53,10 +56,15 @@ describe('Punchcutter', function() {
       {
         name: 'poly',
         src: [testDir + 'data/src/poly/*.svg'],
-        dist: testDir + 'data/dist/',
         builds: [
           {
             type: WEB_FONTS,
+            css: {
+              dist: testDir + 'data/dist/poly/font/'
+            },
+            font: {
+              dist: testDir + 'data/dist/poly/font/'
+            },
             order: [EOT, WOFF, TTF],
             stylesheets: ['scss'],
             syntax: 'bem',
@@ -90,10 +98,17 @@ describe('Punchcutter', function() {
             ]
           },
           {
-            type: JS_FONT
+            type: JS_FONT,
+            dist: testDir + 'data/dist/poly/js/'
           },
           {
-            type: SPRITE
+            type: SPRITE,
+            builds: [
+              {
+                type: SVG,
+                dist: testDir + 'data/dist/poly/sprite/'
+              }
+            ]
           }
         ]
       }
@@ -102,14 +117,7 @@ describe('Punchcutter', function() {
 
   const setup = function(done) {
     // Delete test output.
-    Promise.mapSeries(
-      _.map(config.fonts, function(font) {
-        return font.dist;
-      }),
-      function(file) {
-        return fs.removeAsync(file);
-      }
-    ).then(function() {
+    fs.removeAsync(testDir + 'data/dist/').then(function() {
       done();
     });
   };
@@ -121,26 +129,10 @@ describe('Punchcutter', function() {
     it('Should build', function() {
       this.timeout(5000);
 
-      const actual = function() {
-        return Promise.mapSeries(config.fonts, function(font) {
-          return build(font);
-        })
-          .then(function() {
-            return multiGlob(
-              _.uniq(
-                _.map(config.fonts, function(config) {
-                  return config.dist + '**/*';
-                })
-              ),
-              {
-                nodir: true
-              }
-            );
-          })
-          .then(function(files) {
-            return Promise.resolve(files.sort());
-          });
-      };
+      const actual = () =>
+        Promise.mapSeries(config.fonts, font => build(font))
+          .then(() => multiGlob([testDir + 'data/dist/**/*'], {nodir: true}))
+          .then(files => Promise.resolve(files.sort()));
 
       const expected = [
         testDir + 'data/dist/mono/glyph/svg/erlenmeyer-flask.svg',
