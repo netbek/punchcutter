@@ -1,11 +1,11 @@
-const {build, GLYPHS, PNG, SVG} = require('..');
+const {build, GLYPH, PNG, SVG} = require('..');
 
 build({
   name: 'poly', // Font name.
   src: ['src/poly/*.svg'],
   builds: [
     {
-      type: GLYPHS,
+      type: GLYPH,
       colors: {
         blue: '#00f',
         red: '#f00'

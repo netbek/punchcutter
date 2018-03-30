@@ -1,11 +1,11 @@
-const {build, WEB_FONTS, EOT, WOFF, TTF} = require('..');
+const {build, WEB_FONT, EOT, WOFF, TTF} = require('..');
 
 build({
   name: 'poly', // Font name.
   src: ['src/poly/*.svg'],
   builds: [
     {
-      type: WEB_FONTS,
+      type: WEB_FONT,
       css: {
         dist: 'dist/poly/web-fonts/css/'
       },

@@ -7,10 +7,10 @@ const Promise = require('bluebird');
 const multiGlob = require('../lib/multiGlob');
 const {
   build,
-  GLYPHS,
+  GLYPH,
   JS_FONT,
   SPRITE,
-  WEB_FONTS,
+  WEB_FONT,
   PNG,
   SVG,
   EOT,
@@ -31,7 +31,7 @@ describe('Punchcutter', function() {
         src: [testDir + 'data/src/mono/*.svg'],
         builds: [
           {
-            type: GLYPHS,
+            type: GLYPH,
             builds: [
               {
                 type: SVG,
@@ -58,7 +58,7 @@ describe('Punchcutter', function() {
         src: [testDir + 'data/src/poly/*.svg'],
         builds: [
           {
-            type: WEB_FONTS,
+            type: WEB_FONT,
             css: {
               dist: testDir + 'data/dist/poly/font/'
             },
@@ -75,7 +75,7 @@ describe('Punchcutter', function() {
             types: [EOT, WOFF, TTF]
           },
           {
-            type: GLYPHS,
+            type: GLYPH,
             colors: {
               blue: '#00f',
               red: '#f00'

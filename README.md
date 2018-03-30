@@ -34,11 +34,11 @@ Build fonts.
 
 ### Web fonts
 
-See [examples/web-fonts.js](https://github.com/netbek/punchcutter/blob/master/examples/web-fonts.js). Run the example: `cd examples && node web-fonts.js`
+See [examples/web-font.js](https://github.com/netbek/punchcutter/blob/master/examples/web-font.js). Run the example: `cd examples && node web-font.js`
 
 ### SVG and PNG glyphs
 
-See [examples/glyphs.js](https://github.com/netbek/punchcutter/blob/master/examples/glyphs.js). Run the example: `cd examples && node glyphs.js`
+See [examples/glyph.js](https://github.com/netbek/punchcutter/blob/master/examples/glyph.js). Run the example: `cd examples && node glyph.js`
 
 ### JS font
 
