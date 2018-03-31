@@ -7,10 +7,10 @@ build({
     {
       type: WEB_FONT,
       css: {
-        dist: 'dist/poly/web-fonts/css/'
+        dist: 'dist/poly/web-font/css/'
       },
       font: {
-        dist: 'dist/poly/web-fonts/fonts/'
+        dist: 'dist/poly/web-font/fonts/'
       },
       // codepoints: {}, // https://github.com/sapegin/grunt-webfont#codepoints
       // codepointsFile: '', // https://github.com/sapegin/grunt-webfont#codepointsFile

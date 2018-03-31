@@ -9,7 +9,8 @@ const {
   build,
   GLYPH,
   JS_FONT,
-  SPRITE,
+  PNG_SPRITE,
+  SVG_SPRITE,
   WEB_FONT,
   PNG,
   SVG,
@@ -40,12 +41,11 @@ describe('Punchcutter', function() {
             ]
           },
           {
-            type: SPRITE,
+            type: SVG_SPRITE,
             monochrome: true,
             builds: [
               {
-                type: SVG,
-                dist: testDir + 'data/dist/mono/sprite/',
+                dist: testDir + 'data/dist/mono/svg-sprite/',
                 idPrefix: 'mono--'
               }
             ]
@@ -102,11 +102,30 @@ describe('Punchcutter', function() {
             dist: testDir + 'data/dist/poly/js/'
           },
           {
-            type: SPRITE,
+            type: PNG_SPRITE,
+            css: {
+              dist: testDir + 'data/dist/poly/png-sprite/css/'
+            },
+            idPrefix: 'poly-',
+            rules: [
+              {
+                dpr: 1,
+                src: [testDir + 'data/dist/poly/glyph/png/@1x/*.png'],
+                dist: testDir + 'data/dist/poly/png-sprite/@1x/'
+              },
+              {
+                dpr: 1.5,
+                src: [testDir + 'data/dist/poly/glyph/png/@2x/*.png'],
+                dist: testDir + 'data/dist/poly/png-sprite/@2x/'
+              }
+            ],
+            stylesheets: ['scss']
+          },
+          {
+            type: SVG_SPRITE,
             builds: [
               {
-                type: SVG,
-                dist: testDir + 'data/dist/poly/sprite/'
+                dist: testDir + 'data/dist/poly/svg-sprite/'
               }
             ]
           }
@@ -137,7 +156,7 @@ describe('Punchcutter', function() {
       const expected = [
         testDir + 'data/dist/mono/glyph/svg/erlenmeyer-flask.svg',
         testDir + 'data/dist/mono/glyph/svg/eye.svg',
-        testDir + 'data/dist/mono/sprite/mono.svg',
+        testDir + 'data/dist/mono/svg-sprite/mono.svg',
         testDir + 'data/dist/poly/font/_poly.scss',
         testDir + 'data/dist/poly/font/poly.eot',
         testDir + 'data/dist/poly/font/poly.ttf',
@@ -155,7 +174,10 @@ describe('Punchcutter', function() {
         testDir + 'data/dist/poly/glyph/svg/blue/eye.svg',
         testDir + 'data/dist/poly/glyph/svg/red/eye.svg',
         testDir + 'data/dist/poly/js/poly.js',
-        testDir + 'data/dist/poly/sprite/poly.svg'
+        testDir + 'data/dist/poly/png-sprite/@1x/poly.png',
+        testDir + 'data/dist/poly/png-sprite/@2x/poly.png',
+        testDir + 'data/dist/poly/png-sprite/css/_poly.scss',
+        testDir + 'data/dist/poly/svg-sprite/poly.svg'
       ].sort();
 
       return assert.eventually.deepEqual(actual(), expected);

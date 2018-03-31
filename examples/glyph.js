@@ -13,16 +13,16 @@ build({
       builds: [
         {
           type: SVG,
-          dist: 'dist/poly/glyphs/svg/'
+          dist: 'dist/poly/glyph/svg/'
         },
         {
           type: PNG,
-          dist: 'dist/poly/glyphs/png/@1x/',
+          dist: 'dist/poly/glyph/png/@1x/',
           scale: 1 // Scales SVG before converting to PNG.
         },
         {
           type: PNG,
-          dist: 'dist/poly/glyphs/png/@2x/',
+          dist: 'dist/poly/glyph/png/@2x/',
           scale: 2 // Scales SVG before converting to PNG.
         }
       ]

@@ -1,0 +1,32 @@
+.{{ name }} {
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1;
+  font-weight: normal;
+  font-style: normal;
+  speak: none;
+  text-decoration: inherit;
+}
+
+{%- for group in groups %}
+  {%- if group.dpr == 1 %}
+    {%- for file in group.files %}
+      .{{ file.name }} {
+        background-image: url('{{ file.url }}');
+        background-position: {{ file.x }}px {{ file.y }}px;
+        width: {{ file.width }}px;
+        height: {{ file.height }}px;
+      }
+    {%- endfor %}
+  {%- else %}
+    @media only screen and (min-resolution: {{ group.dpr }}dppx) {
+      {%- for file in group.files %}
+        .{{ file.name }} {
+          background-image: url('{{ file.url }}');
+          background-size: cover;
+        }
+      {%- endfor %}
+    }
+  {%- endif %}
+{%- endfor %}

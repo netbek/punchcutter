@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>png-sprite</title>
+    <link rel="stylesheet" href="{{ css }}" />
+  </head>
+  <body>
+    <ul>
+      {% for glyph in glyphs %}
+        <li>
+          <span class="{{ name }} {{ glyph }}"></span>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
