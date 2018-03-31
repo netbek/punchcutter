@@ -141,7 +141,7 @@ describe('Punchcutter', function() {
   };
 
   beforeEach(setup);
-  // after(setup);
+  after(setup);
 
   describe('build', function() {
     it('Should build', function() {
