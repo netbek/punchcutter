@@ -30,6 +30,7 @@ build({
     },
     {
       type: PNG_SPRITE,
+      algorithm: 'binary-tree', // https://github.com/Ensighten/spritesmith#algorithms
       autoprefixer: {
         browsers: ['last 2 versions'] // https://github.com/browserslist/browserslist#queries
       },
