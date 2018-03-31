@@ -30,6 +30,7 @@ build({
     },
     {
       type: PNG_SPRITE,
+      algorithm: 'binary-tree', // https://github.com/Ensighten/spritesmith#algorithms
       autoprefixer: {
         browsers: ['last 2 versions'] // https://github.com/browserslist/browserslist#queries
       },
@@ -41,20 +42,20 @@ build({
         {
           dppx: 1,
           src: ['dist/poly/glyph/png/16/*.png'],
-          dist: 'dist/poly/png-sprite/@1x/'
-          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
+          dist: 'dist/poly/png-sprite/img/poly.png' // Can be a file or directory. If a directory, add a trailing slash.
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         },
         {
           dppx: 1.5,
           src: ['dist/poly/glyph/png/32/*.png'],
-          dist: 'dist/poly/png-sprite/@2x/'
-          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
+          dist: 'dist/poly/png-sprite/img/poly@2x.png' // Can be a file or directory. If a directory, add a trailing slash.
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         },
         {
           dppx: 2.5,
           src: ['dist/poly/glyph/png/64/*.png'],
-          dist: 'dist/poly/png-sprite/@3x/'
-          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
+          dist: 'dist/poly/png-sprite/img/poly@3x.png' // Can be a file or directory. If a directory, add a trailing slash.
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         }
       ],
       stylesheets: ['css', 'scss'], // Stylesheet types to generate. Options: css, scss
