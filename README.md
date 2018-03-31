@@ -1,6 +1,6 @@
 # Punchcutter [![CircleCI](https://circleci.com/gh/netbek/punchcutter.svg?style=svg)](https://circleci.com/gh/netbek/punchcutter)
 
-Build web fonts, SVG sprites, PNG glyphs, and more.
+Build web fonts, glyphs and sprites.
 
 ## Installation
 
@@ -44,9 +44,13 @@ See [examples/glyph.js](https://github.com/netbek/punchcutter/blob/master/exampl
 
 See [examples/js-font.js](https://github.com/netbek/punchcutter/blob/master/examples/js-font.js). Run the example: `cd examples && node js-font.js`
 
+### PNG sprite
+
+See [examples/png-sprite.js](https://github.com/netbek/punchcutter/blob/master/examples/png-sprite.js). Run the example: `cd examples && node png-sprite.js`
+
 ### SVG sprite
 
-See [examples/sprite.js](https://github.com/netbek/punchcutter/blob/master/examples/sprite.js). Run the example: `cd examples && node sprite.js`
+See [examples/svg-sprite.js](https://github.com/netbek/punchcutter/blob/master/examples/svg-sprite.js). Run the example: `cd examples && node svg-sprite.js`
 
 ## Credit
 
