@@ -13,11 +13,11 @@ build({
         dist: 'dist/poly/web-font/fonts/'
       },
       // codepoints: {}, // https://github.com/sapegin/grunt-webfont#codepoints
-      // codepointsFile: '', // https://github.com/sapegin/grunt-webfont#codepointsFile
+      // codepointsFile: '', // https://github.com/sapegin/grunt-webfont#codepointsfile
       // embed: false, // https://github.com/sapegin/grunt-webfont#embed
-      // htmlDemo: true, // https://github.com/sapegin/grunt-webfont#htmlDemo
+      // htmlDemo: true, // https://github.com/sapegin/grunt-webfont#htmldemo
       order: [EOT, WOFF, TTF], // https://github.com/sapegin/grunt-webfont#order
-      // relativeFontPath: '', // https://github.com/sapegin/grunt-webfont#relativeFontPath
+      // relativeFontPath: '', // https://github.com/sapegin/grunt-webfont#relativefontpath
       stylesheets: ['scss'], // https://github.com/sapegin/grunt-webfont#stylesheets
       syntax: 'bem', // https://github.com/sapegin/grunt-webfont#syntax
       templateOptions: {

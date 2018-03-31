@@ -106,15 +106,14 @@ describe('Punchcutter', function() {
             css: {
               dist: testDir + 'data/dist/poly/png-sprite/css/'
             },
-            idPrefix: 'poly-',
             rules: [
               {
-                dpr: 1,
+                dppx: 1,
                 src: [testDir + 'data/dist/poly/glyph/png/@1x/*.png'],
                 dist: testDir + 'data/dist/poly/png-sprite/@1x/'
               },
               {
-                dpr: 1.5,
+                dppx: 1.5,
                 src: [testDir + 'data/dist/poly/glyph/png/@2x/*.png'],
                 dist: testDir + 'data/dist/poly/png-sprite/@2x/'
               }

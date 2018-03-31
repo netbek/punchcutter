@@ -9,7 +9,7 @@
     <ul>
       {% for glyph in glyphs %}
         <li>
-          <span class="{{ name }} {{ glyph }}"></span>
+          <span class="{{ baseClass }} {{ glyph.class }}"></span>
         </li>
       {% endfor %}
     </ul>

@@ -1,4 +1,4 @@
-.{{ name }} {
+.{{ baseClass }} {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -10,21 +10,24 @@
 }
 
 {%- for group in groups %}
-  {%- if group.dpr == 1 %}
-    {%- for file in group.files %}
-      .{{ file.name }} {
-        background-image: url('{{ file.url }}');
-        background-position: {{ file.x }}px {{ file.y }}px;
-        width: {{ file.width }}px;
-        height: {{ file.height }}px;
+  {%- if group.dppx == 1 %}
+    {%- for glyph in group.glyphs %}
+      .{{ glyph.class }} {
+        background-image: url('{{ glyph.backgroundImage.url }}');
+        background-position: {{ glyph.backgroundPosition.x }}px {{ glyph.backgroundPosition.y }}px;
+        width: {{ glyph.width }}px;
+        height: {{ glyph.height }}px;
       }
     {%- endfor %}
   {%- else %}
-    @media only screen and (min-resolution: {{ group.dpr }}dppx) {
-      {%- for file in group.files %}
-        .{{ file.name }} {
-          background-image: url('{{ file.url }}');
-          background-size: cover;
+    @media only screen and (min-resolution: {{ group.dppx }}dppx) {
+      .{{ baseClass }} {
+        background-size: cover;
+      }
+
+      {%- for glyph in group.glyphs %}
+        .{{ glyph.class }} {
+          background-image: url('{{ glyph.backgroundImage.url }}');
         }
       {%- endfor %}
     }
