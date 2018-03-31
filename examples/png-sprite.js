@@ -42,26 +42,26 @@ build({
           dppx: 1,
           src: ['dist/poly/glyph/png/16/*.png'],
           dist: 'dist/poly/png-sprite/@1x/'
-          // relativeSpritePath: ''
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
         },
         {
           dppx: 1.5,
           src: ['dist/poly/glyph/png/32/*.png'],
           dist: 'dist/poly/png-sprite/@2x/'
-          // relativeSpritePath: ''
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
         },
         {
           dppx: 2.5,
           src: ['dist/poly/glyph/png/64/*.png'],
           dist: 'dist/poly/png-sprite/@3x/'
-          // relativeSpritePath: ''
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed automatically.
         }
       ],
       stylesheets: ['css', 'scss'], // Stylesheet types to generate. Options: css, scss
       templateOptions: {
         baseClass: 'poly',
         classPrefix: 'poly--'
-      }
+      } // Class names in stylesheets.
     }
   ]
 });
