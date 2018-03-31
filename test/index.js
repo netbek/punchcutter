@@ -109,16 +109,20 @@ describe('Punchcutter', function() {
             rules: [
               {
                 dppx: 1,
-                src: [testDir + 'data/dist/poly/glyph/png/@1x/*.png'],
+                src: [testDir + 'data/dist/poly/glyph/png/@1x/blue/*.png'],
                 dist: testDir + 'data/dist/poly/png-sprite/@1x/' // Output to directory
               },
               {
                 dppx: 1.5,
-                src: [testDir + 'data/dist/poly/glyph/png/@2x/*.png'],
+                src: [testDir + 'data/dist/poly/glyph/png/@2x/blue/*.png'],
                 dist: testDir + 'data/dist/poly/png-sprite/img/poly@2x.png' // Output to file
               }
             ],
-            stylesheets: ['scss']
+            stylesheets: ['scss'],
+            templateOptions: {
+              baseClass: 'poly',
+              classPrefix: 'poly--'
+            }
           },
           {
             type: SVG_SPRITE,
