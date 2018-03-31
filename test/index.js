@@ -110,12 +110,12 @@ describe('Punchcutter', function() {
               {
                 dppx: 1,
                 src: [testDir + 'data/dist/poly/glyph/png/@1x/*.png'],
-                dist: testDir + 'data/dist/poly/png-sprite/@1x/'
+                dist: testDir + 'data/dist/poly/png-sprite/@1x/' // Output to directory
               },
               {
                 dppx: 1.5,
                 src: [testDir + 'data/dist/poly/glyph/png/@2x/*.png'],
-                dist: testDir + 'data/dist/poly/png-sprite/@2x/'
+                dist: testDir + 'data/dist/poly/png-sprite/img/poly@2x.png' // Output to file
               }
             ],
             stylesheets: ['scss']
@@ -141,7 +141,7 @@ describe('Punchcutter', function() {
   };
 
   beforeEach(setup);
-  after(setup);
+  // after(setup);
 
   describe('build', function() {
     it('Should build', function() {
@@ -174,7 +174,7 @@ describe('Punchcutter', function() {
         testDir + 'data/dist/poly/glyph/svg/red/eye.svg',
         testDir + 'data/dist/poly/js/poly.js',
         testDir + 'data/dist/poly/png-sprite/@1x/poly.png',
-        testDir + 'data/dist/poly/png-sprite/@2x/poly.png',
+        testDir + 'data/dist/poly/png-sprite/img/poly@2x.png',
         testDir + 'data/dist/poly/png-sprite/css/_poly.scss',
         testDir + 'data/dist/poly/svg-sprite/poly.svg'
       ].sort();
