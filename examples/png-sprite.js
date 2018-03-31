@@ -40,16 +40,19 @@ build({
           dpr: 1,
           src: ['dist/poly/glyph/png/16/*.png'],
           dist: 'dist/poly/png-sprite/@1x/'
+          // relativeSpritePath: ''
         },
         {
           dpr: 1.5,
           src: ['dist/poly/glyph/png/32/*.png'],
           dist: 'dist/poly/png-sprite/@2x/'
+          // relativeSpritePath: ''
         },
         {
           dpr: 2.5,
           src: ['dist/poly/glyph/png/64/*.png'],
           dist: 'dist/poly/png-sprite/@3x/'
+          // relativeSpritePath: ''
         }
       ],
       stylesheets: ['css', 'scss']
