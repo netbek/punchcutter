@@ -7,6 +7,8 @@
   font-style: normal;
   speak: none;
   text-decoration: inherit;
+  background-repeat: no-repeat;
+  background-size: {{ spriteWidth }}px {{ spriteHeight }}px;
   width: {{ glyphWidth }}px;
   height: {{ glyphHeight }}px;
 }
@@ -21,10 +23,6 @@
     {%- endfor %}
   {%- else %}
     @media only screen and (min-resolution: {{ group.dppx }}dppx) {
-      .{{ baseClass }} {
-        background-size: cover;
-      }
-
       {%- for glyph in group.glyphs %}
         .{{ glyph.class }} {
           background-image: url('{{ glyph.backgroundImage.url }}');
