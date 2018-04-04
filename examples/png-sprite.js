@@ -18,13 +18,18 @@ build({
         },
         {
           type: PNG,
+          dist: 'dist/poly/glyph/png/24/',
+          scale: 24 / 512
+        },
+        {
+          type: PNG,
           dist: 'dist/poly/glyph/png/32/',
           scale: 32 / 512
         },
         {
           type: PNG,
-          dist: 'dist/poly/glyph/png/64/',
-          scale: 64 / 512
+          dist: 'dist/poly/glyph/png/48/',
+          scale: 48 / 512
         }
       ]
     },
@@ -42,19 +47,25 @@ build({
         {
           dppx: 1,
           src: ['dist/poly/glyph/png/16/*.png'],
-          dist: 'dist/poly/png-sprite/img/poly.png' // Can be a file or directory. If a directory, add a trailing slash.
+          dist: 'dist/poly/png-sprite/img/poly-mdpi.png' // Can be a file or directory. If a directory, add a trailing slash.
           // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         },
         {
           dppx: 1.5,
-          src: ['dist/poly/glyph/png/32/*.png'],
-          dist: 'dist/poly/png-sprite/img/poly@2x.png' // Can be a file or directory. If a directory, add a trailing slash.
+          src: ['dist/poly/glyph/png/24/*.png'],
+          dist: 'dist/poly/png-sprite/img/poly-hdpi.png' // Can be a file or directory. If a directory, add a trailing slash.
           // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         },
         {
-          dppx: 2.5,
-          src: ['dist/poly/glyph/png/64/*.png'],
-          dist: 'dist/poly/png-sprite/img/poly@3x.png' // Can be a file or directory. If a directory, add a trailing slash.
+          dppx: 2,
+          src: ['dist/poly/glyph/png/32/*.png'],
+          dist: 'dist/poly/png-sprite/img/poly-xhdpi.png' // Can be a file or directory. If a directory, add a trailing slash.
+          // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
+        },
+        {
+          dppx: 3,
+          src: ['dist/poly/glyph/png/48/*.png'],
+          dist: 'dist/poly/png-sprite/img/poly-xxhdpi.png' // Can be a file or directory. If a directory, add a trailing slash.
           // relativeSpritePath: '' // Path from stylesheet to PNG sprite. If empty, the path will be computed.
         }
       ],
