@@ -14,7 +14,7 @@
 }
 
 {%- for group in groups %}
-  {%- if group.dppx == 1 %}
+  {%- if loop.first %}
     {%- for glyph in group.glyphs %}
       .{{ glyph.class }} {
         background-image: url('{{ glyph.backgroundImage.url }}');
