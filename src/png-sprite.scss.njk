@@ -15,19 +15,26 @@
 
 {%- for group in groups %}
   {%- if loop.first %}
+    {% set comma = joiner() -%}
+    {% for glyph in group.glyphs -%}
+      {{ comma() }} .{{ glyph.class }}
+    {%- endfor %} {
+      background-image: url('{{ group.glyphs[0].backgroundImage.url }}');
+    }
+
     {%- for glyph in group.glyphs %}
       .{{ glyph.class }} {
-        background-image: url('{{ glyph.backgroundImage.url }}');
         background-position: {{ glyph.backgroundPosition.x }}px {{ glyph.backgroundPosition.y }}px;
       }
     {%- endfor %}
   {%- else %}
     @media only screen and (min-resolution: {{ group.dppx }}dppx) {
-      {%- for glyph in group.glyphs %}
-        .{{ glyph.class }} {
-          background-image: url('{{ glyph.backgroundImage.url }}');
-        }
-      {%- endfor %}
+      {% set comma = joiner() -%}
+      {% for glyph in group.glyphs -%}
+        {{ comma() }} .{{ glyph.class }}
+      {%- endfor %} {
+        background-image: url('{{ group.glyphs[0].backgroundImage.url }}');
+      }
     }
   {%- endif %}
 {%- endfor %}
