@@ -5,7 +5,7 @@
 
 sudo apt-get purge -y libharfbuzz* ttfautohint
 
-sudo apt-get install -y autoconf automake bison flex git pkg-config gcc g++ libglib2.0-dev libcairo2-dev libtool libc6 libfreetype6 libgcc1 libqtcore4 libqtgui4 libstdc++6 libqt4-dev libfreetype6-dev pandoc pkg-config texlive-xetex help2man
+sudo apt-get install -y autoconf automake bison build-essential flex git pkg-config gcc g++ libglib2.0-dev libcairo2-dev libtool libc6 libfreetype6 libgcc1 libqtcore4 libqtgui4 libstdc++6 libqt4-dev libfreetype6-dev pandoc pkg-config texlive-xetex help2man
 
 cd ~
 wget https://www.freedesktop.org/software/harfbuzz/release/harfbuzz-1.4.2.tar.bz2
