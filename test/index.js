@@ -57,23 +57,23 @@ describe('Punchcutter', function() {
         name: 'poly',
         src: [testDir + 'data/src/poly/*.svg'],
         builds: [
-          // {
-          //   type: WEB_FONT,
-          //   css: {
-          //     dist: testDir + 'data/dist/poly/font/'
-          //   },
-          //   font: {
-          //     dist: testDir + 'data/dist/poly/font/'
-          //   },
-          //   order: [EOT, WOFF, TTF],
-          //   stylesheets: ['scss'],
-          //   syntax: 'bem',
-          //   templateOptions: {
-          //     baseClass: 'poly',
-          //     classPrefix: 'poly--'
-          //   },
-          //   types: [EOT, WOFF, TTF]
-          // },
+          {
+            type: WEB_FONT,
+            css: {
+              dist: testDir + 'data/dist/poly/font/'
+            },
+            font: {
+              dist: testDir + 'data/dist/poly/font/'
+            },
+            order: [EOT, WOFF, TTF],
+            stylesheets: ['scss'],
+            syntax: 'bem',
+            templateOptions: {
+              baseClass: 'poly',
+              classPrefix: 'poly--'
+            },
+            types: [EOT, WOFF, TTF]
+          },
           {
             type: GLYPH,
             colors: {
