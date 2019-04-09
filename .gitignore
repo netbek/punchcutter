@@ -5,6 +5,7 @@ npm-debug.log
 nbproject
 .idea
 .netbeans.xml
+.vscode
 
 # Examples
 examples/dist/
