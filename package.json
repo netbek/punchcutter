@@ -1,6 +1,6 @@
 {
   "name": "punchcutter",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Build fonts",
   "main": "lib/punchcutter.js",
   "repository": {
