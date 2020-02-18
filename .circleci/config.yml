@@ -2,12 +2,9 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8.11.3-stretch-browsers
+      - image: circleci/node:10.19.0-stretch-browsers
     steps:
       - checkout
-      - restore_cache:
-          keys:
-            - yarn-packages-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
           command: |
@@ -15,13 +12,7 @@ jobs:
             sudo apt-get update -qq
             bash ./scripts/install-ttfautohint.sh
             sudo apt-get install -y -qq build-essential fontforge g++ gcc graphicsmagick python-dev
-            rm -fr ~/node_modules
-            yarn install
-      - save_cache:
-          key: yarn-packages-{{ checksum "yarn.lock" }}
-          paths:
-            - ~/.cache/yarn
+            npm ci
       - run:
           name: Run tests
-          command: |
-            yarn test
+          command: npm test
