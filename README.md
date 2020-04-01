@@ -4,18 +4,12 @@ Build web fonts, glyphs and sprites.
 
 ## Installation
 
-### Ubuntu 14-16
+### Ubuntu 18
 
 1. Install system dependencies:
 
     ```
-    sudo apt-get install fontforge g++ graphicsmagick pngquant
-    ```
-
-2. Install ttfautohint:
-
-    ```
-    bash ./scripts/install-ttfautohint.sh
+    sudo apt-get install fontforge g++ graphicsmagick pngquant ttfautohint
     ```
 
 ### OS X
