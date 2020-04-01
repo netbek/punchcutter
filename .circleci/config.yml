@@ -10,8 +10,7 @@ jobs:
           command: |
             sudo npm install -g bower grunt-cli gulp-cli
             sudo apt-get update -qq
-            bash ./scripts/install-ttfautohint.sh
-            sudo apt-get install -y -qq build-essential fontforge g++ gcc graphicsmagick python-dev
+            sudo apt-get install -y -qq build-essential fontforge g++ gcc graphicsmagick python-dev ttfautohint
             npm ci
       - run:
           name: Run tests
