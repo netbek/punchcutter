@@ -19,9 +19,6 @@
   "bugs": {
     "url": "https://github.com/netbek/punchcutter/issues"
   },
-  "resolutions": {
-    "eslint-scope": "3.7.1"
-  },
   "dependencies": {
     "@babel/core": "7.10.5",
     "autoprefixer": "9.8.5",
