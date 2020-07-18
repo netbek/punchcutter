@@ -23,7 +23,7 @@
     "eslint-scope": "3.7.1"
   },
   "dependencies": {
-    "autoprefixer": "8.6.5",
+    "autoprefixer": "9.8.5",
     "babel-core": "6.26.3",
     "babel-eslint": "8.2.6",
     "babel-loader": "7.1.5",
