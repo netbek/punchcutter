@@ -9,10 +9,6 @@ Build web fonts, glyphs and sprites.
 1. Install system dependencies:
 
     ```shell
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-    source ~/.bashrc
-    nvm install v12.18.2
-    nvm alias default v12.18.2
     sudo apt-get install fontforge g++ graphicsmagick pngquant ttfautohint
     ```
 
