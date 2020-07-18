@@ -21,7 +21,7 @@ const {
 
 Promise.promisifyAll(fs);
 
-describe('Punchcutter', function() {
+describe('Punchcutter', function () {
   const testDir = __dirname.substring(process.cwd().length + 1) + '/';
 
   const config = {
@@ -137,9 +137,9 @@ describe('Punchcutter', function() {
     ]
   };
 
-  const setup = function(done) {
+  const setup = function (done) {
     // Delete test output.
-    fs.removeAsync(testDir + 'data/dist/').then(function() {
+    fs.removeAsync(testDir + 'data/dist/').then(function () {
       done();
     });
   };
@@ -147,14 +147,14 @@ describe('Punchcutter', function() {
   beforeEach(setup);
   after(setup);
 
-  describe('build', function() {
-    it('Should build', function() {
+  describe('build', function () {
+    it('Should build', function () {
       this.timeout(10000);
 
       const actual = () =>
-        Promise.mapSeries(config.fonts, font => build(font))
+        Promise.mapSeries(config.fonts, (font) => build(font))
           .then(() => multiGlob([testDir + 'data/dist/**/*'], {nodir: true}))
-          .then(files => Promise.resolve(files.sort()));
+          .then((files) => Promise.resolve(files.sort()));
 
       const expected = [
         testDir + 'data/dist/mono/glyph/svg/erlenmeyer-flask.svg',
