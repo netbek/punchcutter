@@ -8,6 +8,7 @@
     "url": "git://github.com/netbek/punchcutter"
   },
   "scripts": {
+    "format-js": "prettier --parser babel --write \"lib/*.js\"",
     "test": "make test"
   },
   "author": {
