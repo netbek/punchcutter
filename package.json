@@ -52,7 +52,6 @@
     "grunt-webfont": "git+https://github.com/netbek/grunt-webfont.git#netbek-logger-option",
     "lodash": "4.17.19",
     "lodash-webpack-plugin": "0.11.5",
-    "mkdirp": "0.5.5",
     "node-sass": "4.14.1",
     "nunjucks": "3.2.1",
     "pngquant": "3.0.0",
