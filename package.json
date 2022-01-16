@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@babel/core": "7.16.7",
+    "@babel/eslint-parser": "7.16.5",
     "autoprefixer": "10.4.2",
     "babel-loader": "8.2.3",
     "babel-plugin-lodash": "3.3.4",
@@ -42,6 +43,7 @@
     "eslint-plugin-markdown": "2.2.1",
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.28.0",
+    "eslint-plugin-react-hooks": "4.3.0",
     "fs-extra": "10.0.0",
     "glob": "7.2.0",
     "glob-promise": "4.2.2",
@@ -63,10 +65,8 @@
     "webpack": "4.46.0"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.16.5",
     "chai": "4.3.4",
     "chai-as-promised": "7.1.1",
-    "eslint-plugin-react-hooks": "4.3.0",
     "glob-promise": "4.2.2",
     "mocha": "9.1.4"
   }
