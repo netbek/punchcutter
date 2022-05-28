@@ -9,19 +9,11 @@
     "node": true
   },
   "plugins": [
-    "dollar-sign",
-    "html",
     "jsdoc",
-    "jsx-a11y",
-    "markdown",
-    "prettier",
-    "react"
+    "prettier"
   ],
   "extends": [
     "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "airbnb",
     "prettier"
   ],
   "rules": {
@@ -86,39 +78,6 @@
         "bracketSpacing": false
       }
     ],
-    "react/forbid-prop-types": [
-      "error",
-      {
-        "forbid": ["any", "array"]
-      }
-    ],
-    "react/jsx-boolean-value": ["error", "never"],
-    "react/jsx-closing-bracket-location": ["error", "line-aligned"],
-    "react/jsx-curly-spacing": [
-      "error",
-      "never",
-      {
-        "allowMultiline": true
-      }
-    ],
-    "react/jsx-pascal-case": [
-      "error",
-      {
-        "allowAllCaps": true,
-        "ignore": []
-      }
-    ],
-    "react/jsx-tag-spacing": [
-      "error",
-      {
-        "closingSlash": "never",
-        "beforeSelfClosing": "allow",
-        "afterOpening": "never"
-      }
-    ],
-    "react/no-array-index-key": "error",
-    "react/no-unused-prop-types": 0,
-    "react/prefer-stateless-function": 0,
     "vars-on-top": 0
   },
   "parser": "babel-eslint",

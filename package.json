@@ -24,11 +24,21 @@
     "@babel/core": "7.18.2",
     "@babel/eslint-parser": "7.18.2",
     "babel-loader": "8.2.5",
+    "bluebird": "3.7.2",
+    "chalk": "5.0.1",
+    "cheerio": "1.0.0-rc.11",
     "eslint": "8.16.0",
     "eslint-config-prettier": "8.5.0",
     "eslint-plugin-babel": "5.3.1",
+    "eslint-plugin-import": "2.26.0",
+    "eslint-plugin-jsdoc": "39.3.2",
     "eslint-plugin-prettier": "4.0.0",
-    "prettier": "2.6.2"
+    "fs-extra": "10.1.0",
+    "lodash": "4.17.21",
+    "node-sass": "7.0.1",
+    "postcss": "8.4.14",
+    "prettier": "2.6.2",
+    "svgo": "2.8.0"
   },
   "devDependencies": {
     "chai": "4.3.6",
