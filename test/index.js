@@ -14,7 +14,6 @@ const {
   WEB_FONT,
   PNG,
   SVG,
-  EOT,
   WOFF,
   TTF
 } = require('..');
@@ -65,14 +64,14 @@ describe('Punchcutter', function () {
             font: {
               dist: testDir + 'data/dist/poly/font/'
             },
-            order: [EOT, WOFF, TTF],
+            order: [WOFF, TTF],
             stylesheets: ['scss'],
             syntax: 'bem',
             templateOptions: {
               baseClass: 'poly',
               classPrefix: 'poly--'
             },
-            types: [EOT, WOFF, TTF]
+            types: [WOFF, TTF]
           },
           {
             type: GLYPH,
@@ -161,7 +160,6 @@ describe('Punchcutter', function () {
         testDir + 'data/dist/mono/glyph/svg/eye.svg',
         testDir + 'data/dist/mono/svg-sprite/mono.svg',
         testDir + 'data/dist/poly/font/_poly.scss',
-        testDir + 'data/dist/poly/font/poly.eot',
         testDir + 'data/dist/poly/font/poly.ttf',
         testDir + 'data/dist/poly/font/poly.woff',
         testDir + 'data/dist/poly/glyph/png/@1x/blue/erlenmeyer-flask.png',
