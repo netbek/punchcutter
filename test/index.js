@@ -3,8 +3,8 @@ const {assert} = chai;
 const chaiAsPromised = require('chai-as-promised');
 chai.use(chaiAsPromised);
 const fs = require('fs-extra');
+const globby = require('globby');
 const Promise = require('bluebird');
-const multiGlob = require('../lib/multiGlob');
 const {
   build,
   GLYPH,
@@ -17,8 +17,6 @@ const {
   WOFF,
   TTF
 } = require('..');
-
-Promise.promisifyAll(fs);
 
 describe('Punchcutter', function () {
   const testDir = __dirname.substring(process.cwd().length + 1) + '/';
@@ -138,7 +136,7 @@ describe('Punchcutter', function () {
 
   const setup = function (done) {
     // Delete test output.
-    fs.removeAsync(testDir + 'data/dist/').then(function () {
+    fs.remove(testDir + 'data/dist/').then(function () {
       done();
     });
   };
@@ -152,7 +150,7 @@ describe('Punchcutter', function () {
 
       const actual = () =>
         Promise.mapSeries(config.fonts, (font) => build(font))
-          .then(() => multiGlob([testDir + 'data/dist/**/*'], {nodir: true}))
+          .then(() => globby([testDir + 'data/dist/**/*'], {onlyFiles: true}))
           .then((files) => Promise.resolve(files.sort()));
 
       const expected = [
