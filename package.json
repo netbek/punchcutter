@@ -8,7 +8,7 @@
     "url": "git://github.com/netbek/punchcutter"
   },
   "scripts": {
-    "format-js": "prettier --parser babel --write \"{lib,test}/*.js\"",
+    "format-js": "prettier --parser espree --write \"{lib,test}/*.js\"",
     "test": "make test"
   },
   "author": {
@@ -21,29 +21,15 @@
     "url": "https://github.com/netbek/punchcutter/issues"
   },
   "dependencies": {
-    "@babel/core": "7.22.1",
-    "@babel/eslint-parser": "7.21.8",
     "autoprefixer": "10.4.14",
-    "babel-loader": "8.3.0",
-    "babel-plugin-lodash": "3.3.4",
-    "babel-plugin-transform-class-properties": "6.24.1",
     "bluebird": "3.7.2",
     "chalk": "4.1.2",
     "cheerio": "0.22.0",
     "directory-colorfy": "https://github.com/netbek/directory-colorfy.git#netbek-jsdom-9",
     "eslint": "8.41.0",
-    "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.8.0",
-    "eslint-plugin-babel": "5.3.1",
-    "eslint-plugin-dollar-sign": "1.0.2",
-    "eslint-plugin-html": "6.2.0",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-jsdoc": "39.9.1",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-markdown": "2.2.1",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.32.2",
-    "eslint-plugin-react-hooks": "4.6.0",
+    "espree": "9.5.2",
     "fs-extra": "10.1.0",
     "globby": "9.2.0",
     "grunt": "1.6.1",
