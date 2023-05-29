@@ -58,8 +58,7 @@
     "sharp": "0.32.1",
     "spritesmith": "3.4.1",
     "svgo": "2.8.0",
-    "svgstore": "3.0.1",
-    "webpack": "4.46.0"
+    "svgstore": "3.0.1"
   },
   "devDependencies": {
     "chai": "4.3.7",
