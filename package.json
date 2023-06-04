@@ -1,6 +1,6 @@
 {
   "name": "punchcutter",
-  "version": "2.0.9",
+  "version": "2.0.10",
   "engines": {
     "node": "18.16.0",
     "npm": "9.6.7"
