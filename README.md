@@ -12,13 +12,13 @@ Build web fonts, glyphs and sprites.
     sudo apt-get install fontforge g++ graphicsmagick pngquant ttfautohint
     ```
 
-2. Install Node v16 or higher:
+2. Install Node 18.x:
 
     ```shell
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
     source ~/.bashrc
-    nvm install v16.13.2
-    nvm alias default v16.13.2
+    nvm install v18.16.0
+    nvm alias default v18.16.0
     ```
 
 ### OS X
@@ -33,13 +33,13 @@ Build web fonts, glyphs and sprites.
     brew install ttfautohint --with-qt
     ```
 
-2. Install Node v16 or higher:
+2. Install Node 18.x:
 
     ```shell
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
     source ~/.bashrc
-    nvm install v16.13.2
-    nvm alias default v16.13.2
+    nvm install v18.16.0
+    nvm alias default v18.16.0
     ```
 
 ## Usage
