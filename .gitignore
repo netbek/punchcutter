@@ -11,4 +11,4 @@ nbproject
 examples/dist/
 
 # Tests
-test/data/dist/
+lib/__tests__/data/dist/

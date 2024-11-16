@@ -9,7 +9,7 @@
   },
   "scripts": {
     "format-js": "prettier --parser espree --write \"{lib,test}/*.js\"",
-    "test": "make test"
+    "test": "vitest run"
   },
   "author": {
     "name": "Hein Bekker",
@@ -46,8 +46,6 @@
     "svgstore": "3.0.1"
   },
   "devDependencies": {
-    "chai": "4.5.0",
-    "chai-as-promised": "7.1.2",
-    "mocha": "9.2.2"
+    "vitest": "2.1.5"
   }
 }
