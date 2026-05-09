@@ -1,46 +1,6 @@
-# Punchcutter [![CircleCI](https://circleci.com/gh/netbek/punchcutter.svg?style=svg)](https://circleci.com/gh/netbek/punchcutter)
+# Punchcutter
 
 Build web fonts, glyphs and sprites.
-
-## Installation
-
-### Ubuntu 18
-
-1. Install system dependencies:
-
-    ```shell
-    sudo apt-get install fontforge g++ graphicsmagick pngquant ttfautohint
-    ```
-
-2. Install Node 18.x:
-
-    ```shell
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-    source ~/.bashrc
-    nvm install v18.16.0
-    nvm alias default v18.16.0
-    ```
-
-### OS X
-
-1. Install system dependencies:
-
-    ```shell
-    brew install fontforge
-    brew install gcc48 --enable-cxx
-    brew install graphicsmagick
-    brew install pngquant
-    brew install ttfautohint --with-qt
-    ```
-
-2. Install Node 18.x:
-
-    ```shell
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
-    source ~/.bashrc
-    nvm install v18.16.0
-    nvm alias default v18.16.0
-    ```
 
 ## Usage
 

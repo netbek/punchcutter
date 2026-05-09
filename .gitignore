@@ -12,3 +12,8 @@ examples/dist/
 
 # Tests
 lib/__tests__/data/dist/
+
+# Dev environment
+.devenv*
+.direnv
+devenv.local.nix
