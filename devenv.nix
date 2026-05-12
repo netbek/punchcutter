@@ -23,7 +23,7 @@
     javascript = {
       enable = true;
       package = pkgs.nodejs_24;
-      npm = {
+      pnpm = {
         enable = true;
         install = {
           enable = true;
