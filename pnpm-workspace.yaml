@@ -2,3 +2,7 @@ allowBuilds:
   "esbuild@0.27.7": true
   "sharp@0.34.5": true
   "ttf2woff2@4.0.4": true
+
+blockExoticSubdeps: true
+
+minimumReleaseAge: 4320
