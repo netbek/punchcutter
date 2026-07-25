@@ -1,10 +1,16 @@
 allowBuilds:
-  "esbuild@0.27.7": true
+  "esbuild@0.28.1": true
   "sharp@0.34.5": true
-  "ttf2woff2@4.0.4": true
+  "ttf2woff2@https://codeload.github.com/netbek/ttf2woff2/tar.gz/8515a623257621e2254f16dec68b33bb16e42ca6": true
 
-blockExoticSubdeps: true
+# TODO Try to enable https://pnpm.io/settings#blockexoticsubdeps
+blockExoticSubdeps: false
 
-minimumReleaseAge: 4320
+minimumReleaseAge: 10080
 
 trustPolicy: no-downgrade
+
+trustPolicyExclude:
+  - chokidar@4.0.3
+  - eslint-config-prettier@9.1.2
+  - semver@5.7.2
