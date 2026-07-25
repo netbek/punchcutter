@@ -35,7 +35,7 @@
     "prettier": "3.8.3",
     "replace-ext": "2.0.0",
     "sass-embedded": "1.99.0",
-    "sharp": "0.34.5",
+    "sharp": "0.35.0",
     "spritesmith": "3.5.1",
     "svgo": "2.8.2",
     "svgstore": "3.0.1"
