@@ -10,7 +10,7 @@ importers:
     dependencies:
       autoprefixer:
         specifier: 10.5.4
-        version: 10.5.4(postcss@8.5.19)
+        version: 10.5.4(postcss@8.5.20)
       bluebird:
         specifier: 3.7.2
         version: 3.7.2
@@ -28,7 +28,7 @@ importers:
         version: 11.3.6
       globby:
         specifier: 9.2.0
-        version: 9.2.0(supports-color@8.1.1)
+        version: 9.2.0
       grunt:
         specifier: 1.6.2
         version: 1.6.2
@@ -42,8 +42,8 @@ importers:
         specifier: 3.2.4
         version: 3.2.4
       postcss:
-        specifier: 8.5.19
-        version: 8.5.19
+        specifier: 8.5.20
+        version: 8.5.20
       prettier:
         specifier: 3.9.5
         version: 3.9.5
@@ -68,19 +68,19 @@ importers:
     devDependencies:
       '@typescript-eslint/eslint-plugin':
         specifier: 8.64.0
-        version: 8.64.0(@typescript-eslint/parser@8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+        version: 8.64.0(@typescript-eslint/parser@8.64.0(eslint@8.57.1)(typescript@6.0.3))(eslint@8.57.1)(typescript@6.0.3)
       '@typescript-eslint/parser':
         specifier: 8.64.0
-        version: 8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+        version: 8.64.0(eslint@8.57.1)(typescript@6.0.3)
       eslint:
         specifier: 8.57.1
-        version: 8.57.1(supports-color@8.1.1)
+        version: 8.57.1
       eslint-config-prettier:
         specifier: 9.1.2
-        version: 9.1.2(eslint@8.57.1(supports-color@8.1.1))
+        version: 9.1.2(eslint@8.57.1)
       eslint-plugin-prettier:
         specifier: 5.5.6
-        version: 5.5.6(eslint-config-prettier@9.1.2(eslint@8.57.1(supports-color@8.1.1)))(eslint@8.57.1(supports-color@8.1.1))(prettier@3.9.5)
+        version: 5.5.6(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.9.5)
       npm-check-updates:
         specifier: 22.2.9
         version: 22.2.9
@@ -89,7 +89,7 @@ importers:
         version: 6.0.3
       vitest:
         specifier: 3.2.7
-        version: 3.2.7(@types/node@26.1.1)(jsdom@9.12.0)(sass-embedded@1.100.0)(sass@1.100.0)(supports-color@8.1.1)
+        version: 3.2.7(@types/node@26.1.1)(jsdom@9.12.0)(sass-embedded@1.100.0)(sass@1.100.0)
 
 packages:
 
@@ -1272,7 +1272,7 @@ packages:
     engines: {node: '>=4'}
 
   directory-colorfy@https://codeload.github.com/netbek/directory-colorfy/tar.gz/ff2db22b14038716fe77b25254698118d0c0857a:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/netbek/directory-colorfy/tar.gz/ff2db22b14038716fe77b25254698118d0c0857a}
+    resolution: {tarball: https://codeload.github.com/netbek/directory-colorfy/tar.gz/ff2db22b14038716fe77b25254698118d0c0857a}
     version: 1.1.0
     engines: {node: '>= 0.8.0'}
 
@@ -1687,7 +1687,7 @@ packages:
     engines: {node: '>=10'}
 
   grunt-webfont@https://codeload.github.com/netbek/grunt-webfont/tar.gz/ab16ba0b8ce000d58c9fd5a62b0acb60fe4a02d7:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/netbek/grunt-webfont/tar.gz/ab16ba0b8ce000d58c9fd5a62b0acb60fe4a02d7}
+    resolution: {tarball: https://codeload.github.com/netbek/grunt-webfont/tar.gz/ab16ba0b8ce000d58c9fd5a62b0acb60fe4a02d7}
     version: 1.7.2
     engines: {node: '>=0.12.0'}
     peerDependencies:
@@ -2355,12 +2355,8 @@ packages:
   postcss-value-parser@4.2.0:
     resolution: {integrity: sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==}
 
-  postcss@8.5.14:
-    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
-    engines: {node: ^10 || ^12 || >=14}
-
-  postcss@8.5.19:
-    resolution: {integrity: sha512-Mz8SaolMd8nB+G13WkORcxQKHZ/NE4xXevtkJHVuG+guo9/wYKlIMTKAqGdEmYOXR2ijPjTYNHssizdaVSUNdQ==}
+  postcss@8.5.20:
+    resolution: {integrity: sha512-lW616l85ucIQL+FocMmL7pQFPqBmwejrCMg+iPxyImlrANNJG9NHq/RkyCZopDhd8C3LA03PHRJDjkbGu8vvug==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.1.2:
@@ -2943,7 +2939,7 @@ packages:
     hasBin: true
 
   ttf2woff2@https://codeload.github.com/netbek/ttf2woff2/tar.gz/8515a623257621e2254f16dec68b33bb16e42ca6:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/netbek/ttf2woff2/tar.gz/8515a623257621e2254f16dec68b33bb16e42ca6}
+    resolution: {tarball: https://codeload.github.com/netbek/ttf2woff2/tar.gz/8515a623257621e2254f16dec68b33bb16e42ca6}
     version: 4.0.4
     engines: {node: '>=12'}
     hasBin: true
@@ -3293,17 +3289,17 @@ snapshots:
   '@esbuild/win32-x64@0.28.1':
     optional: true
 
-  '@eslint-community/eslint-utils@4.9.1(eslint@8.57.1(supports-color@8.1.1))':
+  '@eslint-community/eslint-utils@4.9.1(eslint@8.57.1)':
     dependencies:
-      eslint: 8.57.1(supports-color@8.1.1)
+      eslint: 8.57.1
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.2': {}
 
-  '@eslint/eslintrc@2.1.4(supports-color@8.1.1)':
+  '@eslint/eslintrc@2.1.4':
     dependencies:
       ajv: 6.15.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       espree: 9.6.1
       globals: 13.24.0
       ignore: 5.3.2
@@ -3316,10 +3312,10 @@ snapshots:
 
   '@eslint/js@8.57.1': {}
 
-  '@humanwhocodes/config-array@0.13.0(supports-color@8.1.1)':
+  '@humanwhocodes/config-array@0.13.0':
     dependencies:
       '@humanwhocodes/object-schema': 2.0.3
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       minimatch: 3.1.5
     transitivePeerDependencies:
       - supports-color
@@ -3615,15 +3611,15 @@ snapshots:
     dependencies:
       undici-types: 8.3.0
 
-  '@typescript-eslint/eslint-plugin@8.64.0(@typescript-eslint/parser@8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3))(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/eslint-plugin@8.64.0(@typescript-eslint/parser@8.64.0(eslint@8.57.1)(typescript@6.0.3))(eslint@8.57.1)(typescript@6.0.3)':
     dependencies:
       '@eslint-community/regexpp': 4.12.2
-      '@typescript-eslint/parser': 8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/parser': 8.64.0(eslint@8.57.1)(typescript@6.0.3)
       '@typescript-eslint/scope-manager': 8.64.0
-      '@typescript-eslint/type-utils': 8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
-      '@typescript-eslint/utils': 8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/type-utils': 8.64.0(eslint@8.57.1)(typescript@6.0.3)
+      '@typescript-eslint/utils': 8.64.0(eslint@8.57.1)(typescript@6.0.3)
       '@typescript-eslint/visitor-keys': 8.64.0
-      eslint: 8.57.1(supports-color@8.1.1)
+      eslint: 8.57.1
       ignore: 7.0.6
       natural-compare: 1.4.0
       ts-api-utils: 2.5.0(typescript@6.0.3)
@@ -3631,23 +3627,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/parser@8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/parser@8.64.0(eslint@8.57.1)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/scope-manager': 8.64.0
       '@typescript-eslint/types': 8.64.0
-      '@typescript-eslint/typescript-estree': 8.64.0(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/typescript-estree': 8.64.0(typescript@6.0.3)
       '@typescript-eslint/visitor-keys': 8.64.0
-      debug: 4.4.3(supports-color@8.1.1)
-      eslint: 8.57.1(supports-color@8.1.1)
+      debug: 4.4.3
+      eslint: 8.57.1
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/project-service@8.64.0(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/project-service@8.64.0(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.64.0(typescript@6.0.3)
       '@typescript-eslint/types': 8.64.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -3661,13 +3657,13 @@ snapshots:
     dependencies:
       typescript: 6.0.3
 
-  '@typescript-eslint/type-utils@8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/type-utils@8.64.0(eslint@8.57.1)(typescript@6.0.3)':
     dependencies:
       '@typescript-eslint/types': 8.64.0
-      '@typescript-eslint/typescript-estree': 8.64.0(supports-color@8.1.1)(typescript@6.0.3)
-      '@typescript-eslint/utils': 8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)
-      debug: 4.4.3(supports-color@8.1.1)
-      eslint: 8.57.1(supports-color@8.1.1)
+      '@typescript-eslint/typescript-estree': 8.64.0(typescript@6.0.3)
+      '@typescript-eslint/utils': 8.64.0(eslint@8.57.1)(typescript@6.0.3)
+      debug: 4.4.3
+      eslint: 8.57.1
       ts-api-utils: 2.5.0(typescript@6.0.3)
       typescript: 6.0.3
     transitivePeerDependencies:
@@ -3675,13 +3671,13 @@ snapshots:
 
   '@typescript-eslint/types@8.64.0': {}
 
-  '@typescript-eslint/typescript-estree@8.64.0(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/typescript-estree@8.64.0(typescript@6.0.3)':
     dependencies:
-      '@typescript-eslint/project-service': 8.64.0(supports-color@8.1.1)(typescript@6.0.3)
+      '@typescript-eslint/project-service': 8.64.0(typescript@6.0.3)
       '@typescript-eslint/tsconfig-utils': 8.64.0(typescript@6.0.3)
       '@typescript-eslint/types': 8.64.0
       '@typescript-eslint/visitor-keys': 8.64.0
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       minimatch: 10.2.5
       semver: 7.8.5
       tinyglobby: 0.2.17
@@ -3690,13 +3686,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@typescript-eslint/utils@8.64.0(eslint@8.57.1(supports-color@8.1.1))(supports-color@8.1.1)(typescript@6.0.3)':
+  '@typescript-eslint/utils@8.64.0(eslint@8.57.1)(typescript@6.0.3)':
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@8.57.1(supports-color@8.1.1))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@8.57.1)
       '@typescript-eslint/scope-manager': 8.64.0
       '@typescript-eslint/types': 8.64.0
-      '@typescript-eslint/typescript-estree': 8.64.0(supports-color@8.1.1)(typescript@6.0.3)
-      eslint: 8.57.1(supports-color@8.1.1)
+      '@typescript-eslint/typescript-estree': 8.64.0(typescript@6.0.3)
+      eslint: 8.57.1
       typescript: 6.0.3
     transitivePeerDependencies:
       - supports-color
@@ -3845,13 +3841,13 @@ snapshots:
 
   atob@2.1.2: {}
 
-  autoprefixer@10.5.4(postcss@8.5.19):
+  autoprefixer@10.5.4(postcss@8.5.20):
     dependencies:
       browserslist: 4.28.6
       caniuse-lite: 1.0.30001806
       fraction.js: 5.3.4
       picocolors: 1.1.1
-      postcss: 8.5.19
+      postcss: 8.5.20
       postcss-value-parser: 4.2.0
 
   aws-sign2@0.7.0: {}
@@ -3897,7 +3893,7 @@ snapshots:
     dependencies:
       balanced-match: 4.0.4
 
-  braces@2.3.2(supports-color@8.1.1):
+  braces@2.3.2:
     dependencies:
       arr-flatten: 1.1.0
       array-unique: 0.3.2
@@ -3905,7 +3901,7 @@ snapshots:
       fill-range: 4.0.0
       isobject: 3.0.1
       repeat-element: 1.1.4
-      snapdragon: 0.8.2(supports-color@8.1.1)
+      snapdragon: 0.8.2
       snapdragon-node: 2.1.1
       split-string: 3.1.0
       to-regex: 3.0.2
@@ -4151,17 +4147,13 @@ snapshots:
 
   dateformat@4.6.3: {}
 
-  debug@2.6.9(supports-color@8.1.1):
+  debug@2.6.9:
     dependencies:
       ms: 2.0.0
-    optionalDependencies:
-      supports-color: 8.1.1
 
-  debug@4.4.3(supports-color@8.1.1):
+  debug@4.4.3:
     dependencies:
       ms: 2.1.3
-    optionalDependencies:
-      supports-color: 8.1.1
 
   decode-uri-component@0.2.2: {}
 
@@ -4309,18 +4301,18 @@ snapshots:
     optionalDependencies:
       source-map: 0.6.1
 
-  eslint-config-prettier@9.1.2(eslint@8.57.1(supports-color@8.1.1)):
+  eslint-config-prettier@9.1.2(eslint@8.57.1):
     dependencies:
-      eslint: 8.57.1(supports-color@8.1.1)
+      eslint: 8.57.1
 
-  eslint-plugin-prettier@5.5.6(eslint-config-prettier@9.1.2(eslint@8.57.1(supports-color@8.1.1)))(eslint@8.57.1(supports-color@8.1.1))(prettier@3.9.5):
+  eslint-plugin-prettier@5.5.6(eslint-config-prettier@9.1.2(eslint@8.57.1))(eslint@8.57.1)(prettier@3.9.5):
     dependencies:
-      eslint: 8.57.1(supports-color@8.1.1)
+      eslint: 8.57.1
       prettier: 3.9.5
       prettier-linter-helpers: 1.0.1
       synckit: 0.11.13
     optionalDependencies:
-      eslint-config-prettier: 9.1.2(eslint@8.57.1(supports-color@8.1.1))
+      eslint-config-prettier: 9.1.2(eslint@8.57.1)
 
   eslint-scope@7.2.2:
     dependencies:
@@ -4331,20 +4323,20 @@ snapshots:
 
   eslint-visitor-keys@5.0.1: {}
 
-  eslint@8.57.1(supports-color@8.1.1):
+  eslint@8.57.1:
     dependencies:
-      '@eslint-community/eslint-utils': 4.9.1(eslint@8.57.1(supports-color@8.1.1))
+      '@eslint-community/eslint-utils': 4.9.1(eslint@8.57.1)
       '@eslint-community/regexpp': 4.12.2
-      '@eslint/eslintrc': 2.1.4(supports-color@8.1.1)
+      '@eslint/eslintrc': 2.1.4
       '@eslint/js': 8.57.1
-      '@humanwhocodes/config-array': 0.13.0(supports-color@8.1.1)
+      '@humanwhocodes/config-array': 0.13.0
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
       '@ungap/structured-clone': 1.3.3
       ajv: 6.15.0
       chalk: 4.1.2
       cross-spawn: 7.0.6
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       doctrine: 3.0.0
       escape-string-regexp: 4.0.0
       eslint-scope: 7.2.2
@@ -4408,14 +4400,14 @@ snapshots:
 
   exit@0.1.2: {}
 
-  expand-brackets@2.1.4(supports-color@8.1.1):
+  expand-brackets@2.1.4:
     dependencies:
-      debug: 2.6.9(supports-color@8.1.1)
+      debug: 2.6.9
       define-property: 0.2.5
       extend-shallow: 2.0.1
       posix-character-classes: 0.1.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@8.1.1)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4437,15 +4429,15 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extglob@2.0.4(supports-color@8.1.1):
+  extglob@2.0.4:
     dependencies:
       array-unique: 0.3.2
       define-property: 1.0.0
-      expand-brackets: 2.1.4(supports-color@8.1.1)
+      expand-brackets: 2.1.4
       extend-shallow: 2.0.1
       fragment-cache: 0.2.1
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@8.1.1)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -4458,14 +4450,14 @@ snapshots:
 
   fast-diff@1.3.0: {}
 
-  fast-glob@2.2.7(supports-color@8.1.1):
+  fast-glob@2.2.7:
     dependencies:
       '@mrmlnc/readdir-enhanced': 2.2.1
       '@nodelib/fs.stat': 1.1.3
       glob-parent: 3.1.0
       is-glob: 4.0.3
       merge2: 1.4.1
-      micromatch: 3.1.10(supports-color@8.1.1)
+      micromatch: 3.1.10
     transitivePeerDependencies:
       - supports-color
 
@@ -4674,12 +4666,12 @@ snapshots:
     dependencies:
       type-fest: 0.20.2
 
-  globby@9.2.0(supports-color@8.1.1):
+  globby@9.2.0:
     dependencies:
       '@types/glob': 7.2.0
       array-union: 1.0.2
       dir-glob: 2.2.2
-      fast-glob: 2.2.7(supports-color@8.1.1)
+      fast-glob: 2.2.7
       glob: 7.2.3
       ignore: 4.0.6
       pify: 4.0.1
@@ -5094,20 +5086,20 @@ snapshots:
 
   microbuffer@1.0.0: {}
 
-  micromatch@3.1.10(supports-color@8.1.1):
+  micromatch@3.1.10:
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
-      braces: 2.3.2(supports-color@8.1.1)
+      braces: 2.3.2
       define-property: 2.0.2
       extend-shallow: 3.0.2
-      extglob: 2.0.4(supports-color@8.1.1)
+      extglob: 2.0.4
       fragment-cache: 0.2.1
       kind-of: 6.0.3
-      nanomatch: 1.2.13(supports-color@8.1.1)
+      nanomatch: 1.2.13
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@8.1.1)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -5165,7 +5157,7 @@ snapshots:
 
   nanoid@3.3.16: {}
 
-  nanomatch@1.2.13(supports-color@8.1.1):
+  nanomatch@1.2.13:
     dependencies:
       arr-diff: 4.0.0
       array-unique: 0.3.2
@@ -5176,7 +5168,7 @@ snapshots:
       kind-of: 6.0.3
       object.pick: 1.3.0
       regex-not: 1.0.2
-      snapdragon: 0.8.2(supports-color@8.1.1)
+      snapdragon: 0.8.2
       to-regex: 3.0.2
     transitivePeerDependencies:
       - supports-color
@@ -5408,13 +5400,7 @@ snapshots:
 
   postcss-value-parser@4.2.0: {}
 
-  postcss@8.5.14:
-    dependencies:
-      nanoid: 3.3.16
-      picocolors: 1.1.1
-      source-map-js: 1.2.1
-
-  postcss@8.5.19:
+  postcss@8.5.20:
     dependencies:
       nanoid: 3.3.16
       picocolors: 1.1.1
@@ -5789,10 +5775,10 @@ snapshots:
     dependencies:
       kind-of: 3.2.2
 
-  snapdragon@0.8.2(supports-color@8.1.1):
+  snapdragon@0.8.2:
     dependencies:
       base: 0.11.2
-      debug: 2.6.9(supports-color@8.1.1)
+      debug: 2.6.9
       define-property: 0.2.5
       extend-shallow: 2.0.1
       map-cache: 0.2.2
@@ -6147,10 +6133,10 @@ snapshots:
       clone-stats: 0.0.1
       replace-ext: 0.0.1
 
-  vite-node@3.2.4(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0)(supports-color@8.1.1):
+  vite-node@3.2.4(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0):
     dependencies:
       cac: 6.7.14
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       es-module-lexer: 1.7.0
       pathe: 2.0.3
       vite: 7.3.6(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0)
@@ -6173,7 +6159,7 @@ snapshots:
       esbuild: 0.28.1
       fdir: 6.5.0(picomatch@4.0.5)
       picomatch: 4.0.5
-      postcss: 8.5.14
+      postcss: 8.5.20
       rollup: 4.62.2
       tinyglobby: 0.2.17
     optionalDependencies:
@@ -6182,7 +6168,7 @@ snapshots:
       sass: 1.100.0
       sass-embedded: 1.100.0
 
-  vitest@3.2.7(@types/node@26.1.1)(jsdom@9.12.0)(sass-embedded@1.100.0)(sass@1.100.0)(supports-color@8.1.1):
+  vitest@3.2.7(@types/node@26.1.1)(jsdom@9.12.0)(sass-embedded@1.100.0)(sass@1.100.0):
     dependencies:
       '@types/chai': 5.2.3
       '@vitest/expect': 3.2.7
@@ -6193,7 +6179,7 @@ snapshots:
       '@vitest/spy': 3.2.7
       '@vitest/utils': 3.2.7
       chai: 5.3.3
-      debug: 4.4.3(supports-color@8.1.1)
+      debug: 4.4.3
       expect-type: 1.4.0
       magic-string: 0.30.21
       pathe: 2.0.3
@@ -6205,7 +6191,7 @@ snapshots:
       tinypool: 1.1.1
       tinyrainbow: 2.0.0
       vite: 7.3.6(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0)
-      vite-node: 3.2.4(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0)(supports-color@8.1.1)
+      vite-node: 3.2.4(@types/node@26.1.1)(sass-embedded@1.100.0)(sass@1.100.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 26.1.1
