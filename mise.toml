@@ -1,3 +1,6 @@
+[bootstrap.packages]
+"apt:fontforge" = "latest"
+
 [tools]
 node = "24"
 pnpm = "latest"
@@ -15,6 +18,7 @@ _.path = ["{{config_root}}/node_modules/.bin"]
 
 [hooks.enter]
 run = """
+mise bootstrap packages apply --quiet
 mise install --quiet
 mise run pnpm-install
 if [ -d .git ]; then pre-commit install --overwrite > /dev/null 2>&1; fi
