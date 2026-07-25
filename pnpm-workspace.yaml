@@ -1,6 +1,6 @@
 allowBuilds:
   "esbuild@0.28.1": true
-  "sharp@0.34.5": true
+  "sharp@0.35.3": true
   "ttf2woff2@https://codeload.github.com/netbek/ttf2woff2/tar.gz/8515a623257621e2254f16dec68b33bb16e42ca6": true
 
 # TODO Try to enable https://pnpm.io/settings#blockexoticsubdeps
